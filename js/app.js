@@ -1,10 +1,9 @@
 /* Jamaica Eats - js/app.js
-   Plain JavaScript for all pages, plus one jQuery feature (the table search).
-   Each section only runs if the elements it needs are on the current page. */
+JavaScript for each page and one jQuery feature (the table search).
+   Each section only runs if the elements it needs are on the page currently*/
 
 // ---------- DATA ----------
-// An ARRAY of OBJECTS. Each object holds the details for one restaurant.
-// It uses strings (name, category), numbers (rank, yearOpened) and booleans (hasJerk).
+//Each object holds the details for one restaurant.
 const restaurants = [
     { rank: 1, name: "KFC", category: "Chicken", yearOpened: 1975, hasJerk: false, detailsId: "kfc-details",
       knownFor: "Jamaica's first KFC opened on Old Hope Road in Kingston." },
@@ -18,12 +17,12 @@ const restaurants = [
       knownFor: "Online ordering and jerk chicken toppings." }
 ];
 
-// Tracks which category button is selected. "let" because it changes.
+// Tracks which category button is selected.
 let selectedCategory = "All";
 
 // ---------- FUNCTIONS ----------
 
-// Describes how long a restaurant has been open (uses a condition).
+// Describes how long a restaurant has been open for.
 function describeAge(restaurant) {
     if (restaurant.yearOpened === null) {
         return "Opening year not listed";
@@ -33,7 +32,7 @@ function describeAge(restaurant) {
     }
 }
 
-// Builds the HTML for ONE restaurant card.
+// Builds the HTML for ONE restaurant's card.
 function buildCard(restaurant) {
     let jerkBadge = "";
     if (restaurant.hasJerk) {
@@ -55,7 +54,7 @@ function buildCard(restaurant) {
         </div>`;
 }
 
-// Shows only the cards that match the selected category.
+// Shows cards that match the selected category
 function showRestaurants() {
     const cardBox = document.getElementById("restaurant-cards");
     const resultCount = document.getElementById("result-count");
@@ -75,7 +74,7 @@ function showRestaurants() {
     resultCount.textContent = "Showing " + count + " of " + restaurants.length + " restaurants";
 }
 
-// Highlights the button that was clicked.
+// Highlights the button that was clicked
 function setActiveButton(clickedButton) {
     const allButtons = document.querySelectorAll("#filter-buttons button");
     allButtons.forEach(function (button) {
@@ -84,7 +83,7 @@ function setActiveButton(clickedButton) {
     clickedButton.classList.add("active");
 }
 
-// Creates one filter button for each category, plus "All".
+// Creates one filter button for each category
 function createFilterButtons() {
     const filterBox = document.getElementById("filter-buttons");
     const categories = ["All"];
@@ -114,7 +113,7 @@ function createFilterButtons() {
     });
 }
 
-// Fills the Quick Facts table from the same array (a second loop).
+// Fills the Quick Facts table from the same array
 function buildTable() {
     const tableBody = document.querySelector("#factsTable tbody");
     let rows = "";
@@ -134,7 +133,7 @@ function buildTable() {
     tableBody.innerHTML = rows;
 }
 
-// Opens one accordion item with Bootstrap's JavaScript, then scrolls to it.
+// Opens one accordion item with Bootstrap's JavaScript, then scrolls to it
 function openDetails(detailsId) {
     const panel = document.getElementById(detailsId);
     bootstrap.Collapse.getOrCreateInstance(panel, { toggle: false }).show();
@@ -207,7 +206,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // jQuery: live search that hides table rows that don't match
+        // jQuery: that searches and hides table rows that don't match the search
         $("#tableSearch").on("keyup", function () {
             const searchText = $(this).val().toLowerCase();
             $("#factsTable tbody tr").each(function () {
@@ -217,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Contact page: form handled by JavaScript
+    // Contact page form
     const contactForm = document.getElementById("contactForm");
     if (contactForm) {
         const formAlert = document.getElementById("formAlert");
