@@ -1,0 +1,95 @@
+/* Jamaica Eats - custom styles (loaded after Bootstrap) */
+:root {
+    --jm-green: #0b6b3a;
+    --jm-gold: #fed100;
+    --jm-black: #111111;
+}
+
+body {
+    background-color: #fafaf5;
+}
+
+.text-gold { color: var(--jm-gold); }
+
+/* Buttons */
+.btn-gold {
+    background-color: var(--jm-gold);
+    border-color: var(--jm-gold);
+    color: var(--jm-black);
+    font-weight: 600;
+}
+.btn-gold:hover, .btn-gold:focus {
+    background-color: #e6bc00;
+    border-color: #e6bc00;
+    color: var(--jm-black);
+}
+.btn-filter {
+    border: 2px solid var(--jm-green);
+    color: var(--jm-green);
+    background-color: #fff;
+}
+.btn-filter:hover, .btn-filter.active {
+    background-color: var(--jm-green);
+    color: #fff;
+}
+
+/* Navbar: highlight the current page (the "active" class is added by app.js) */
+.navbar .nav-link.active {
+    color: var(--jm-gold);
+    font-weight: 600;
+    border-bottom: 2px solid var(--jm-gold);
+}
+
+/* Hero banner on the home page */
+.hero {
+    background: linear-gradient(135deg, var(--jm-green), var(--jm-black));
+}
+.hero-text { max-width: 640px; }
+
+/* Section headings */
+.section-title {
+    font-weight: 700;
+    border-left: 6px solid var(--jm-gold);
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Cards */
+.restaurant-card {
+    border: 0;
+    border-top: 5px solid var(--jm-green);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.restaurant-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Carousel slides (colour backgrounds, text from the HTML) */
+.carousel-item { height: 280px; }
+.slide-one   { background: linear-gradient(135deg, #0b6b3a, #1e8f55); }
+.slide-two   { background: linear-gradient(135deg, #b3380f, #f08a24); }
+.slide-three { background: linear-gradient(135deg, #222222, #0b6b3a); }
+.carousel-caption { bottom: 2.5rem; text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5); }
+
+/* Accordion */
+.accordion-button:not(.collapsed) {
+    background-color: #e9f5ee;
+    color: var(--jm-green);
+}
+.menu-list li { margin-bottom: 0.5rem; }
+.accordion-item { scroll-margin-top: 80px; }
+
+/* Footer */
+.site-footer {
+    background-color: var(--jm-black);
+    color: #dddddd;
+    border-top: 3px solid var(--jm-gold);
+}
+.site-footer a { color: var(--jm-gold); text-decoration: none; }
+.site-footer a:hover { text-decoration: underline; }
+
+@media (max-width: 576px) {
+    .carousel-item { height: 240px; }
+    .hero { padding: 2rem 1rem !important; }
+}

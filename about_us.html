@@ -3,53 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> About Us </title>
+    <meta name="description" content="Jamaica Eats: the top 5 fast food restaurants in Jamaica, with background, menu highlights and links to prices.">
+    <title>About Us | Jamaica Eats</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/site.css">
-</head>
-    <body>
-        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Jamaica Eats</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        <a class="nav-link" href="contact_us.html">Contact Us</a>
-        <a class="nav-link" href="about_us.html">About Us</a>
-      </div>
-    </div>
-  </div>
-</nav>
-<div id="main" class="container">
-        <!--KFC-->
-<div><main>
-    <h1>About Us</h1>
-    <hr/>
-    <h2>About Our Company</h2>
-    <img src="images/about_us_image_lady.jpg" alt="Team Member Smiling in a restaurant" width="640" height="640">
-    <p>As we are a team of passionate food enthusiasts, our goal is to provide the best advice on dining spots possible in Jamaica.</p>
-    <h2>Our Mission </h2>
-    <ul>
-        <li>Our mission is to help you discover the best dining experiences in Kingston.</li>
-        <li>We are committed to providing accurate and up-to-date information about local restaurants and their offerings.</li>
-        <li>Our team of food experts is always exploring new culinary horizons to bring you the latest trends.</li>
-    </ul>
-    <h2>Our Values</h2>
-    <ol>
-        <li>Our values include integrity, quality, and customer satisfaction.</li>
-        <li>We strive to create a welcoming environment for all our customers.</li>
-        <li>We believe in supporting local businesses and promoting the culinary culture of Jamaica.</li>
-        <li> 
-            <a href="contact_us.html">Contact Us</a> If you own a restaurant in Jamaica, we would love to feature it on our platform.</li>
-    </ol>
-</div></div>main>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Jamaica <span class="text-gold">Eats</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4">
+        <h1 class="mb-4">About Us</h1>
+
+        <section class="row g-4 align-items-center mb-5" aria-labelledby="companyHeading">
+            <div class="col-md-5">
+                <img src="images/about_us_image_lady.jpg" alt="Woman in a Jamaica apron smiling in a kitchen next to a freshly baked pie" class="img-fluid rounded-4 shadow">
+            </div>
+            <div class="col-md-7">
+                <h2 id="companyHeading">About Our Company</h2>
+                <p>As we are a team of passionate food enthusiasts, our goal is to provide the best advice on dining spots possible in Jamaica.</p>
+                <a href="contact_us.html" class="btn btn-gold">Contact Us</a>
+            </div>
+        </section>
+
+        <div class="row g-4">
+            <section class="col-md-6" aria-labelledby="missionHeading">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 id="missionHeading" class="h4 card-title">Our Mission</h2>
+                        <ul>
+                            <li>Our mission is to help you discover the best dining experiences in Kingston.</li>
+                            <li>We are committed to providing accurate and up-to-date information about local restaurants and their offerings.</li>
+                            <li>Our team of food experts is always exploring new culinary horizons to bring you the latest trends.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="col-md-6" aria-labelledby="valuesHeading">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h2 id="valuesHeading" class="h4 card-title">Our Values</h2>
+                        <ol>
+                            <li>Our values include integrity, quality, and customer satisfaction.</li>
+                            <li>We strive to create a welcoming environment for all our customers.</li>
+                            <li>We believe in supporting local businesses and promoting the culinary culture of Jamaica.</li>
+                            <li><a href="contact_us.html">Contact Us</a> If you own a restaurant in Jamaica, we would love to feature it on our platform.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-5 py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <p class="mb-0">&copy; <span id="year">2026</span> Jamaica Eats. Food facts for fans of Jamaican fast food.</p>
+            <p class="mb-0"><a href="index.html">Home</a> &middot; <a href="contact_us.html">Contact Us</a> &middot; <a href="about_us.html">About Us</a></p>
+        </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
-   <script src="js/app.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
