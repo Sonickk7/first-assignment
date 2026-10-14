@@ -3,33 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmation</title>
+    <meta name="description" content="Jamaica Eats: the top 5 fast food restaurants in Jamaica, with background, menu highlights and links to prices.">
+    <title>Confirmation | Jamaica Eats</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/site.css">
-</head>
-    <body>
-        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Jamaica Eats</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        <a class="nav-link" href="contact_us.html">Contact Us</a>
-        <a class="nav-link" href="about_us.html">About Us</a>
-      </div>
-    </div>
-  </div>
-</nav>
-<div id="main" class="container">
-        <!--KFC-->
-<div><main>
-    <h1>Confirmation Page</h1>
-    <p>Thank you for your submission! We have received your message and will get back to you in 1 to 3 business days.</p>
-</main></div>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body sticky-top" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">Jamaica <span class="text-gold">Eats</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="contact_us.html">Contact Us</a>
+                        <a class="nav-link" href="about_us.html">About Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h1 class="mb-3">Confirmation</h1>
+                <div class="alert alert-success" role="status">
+                    <p class="mb-0"><span id="thanksName">Thank you</span> for your submission! We have received your message and will get back to you in 1 to 3 business days.</p>
+                </div>
+                <a href="index.html" class="btn btn-gold">Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer mt-5 py-4">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <p class="mb-0">&copy; <span id="year">2026</span> Jamaica Eats. Food facts for fans of Jamaican fast food.</p>
+            <p class="mb-0"><a href="index.html">Home</a> &middot; <a href="contact_us.html">Contact Us</a> &middot; <a href="about_us.html">About Us</a></p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
