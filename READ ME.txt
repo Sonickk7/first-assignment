@@ -1,111 +1,87 @@
-This website called JAMAICA EATS is a small website which features the Top 5 fast food restaurants in Jamaica which are KFC, Pizza Hut, Burger King, Tastee Patties and Domino's. Each restaurant has a short background, menu highlights a video for the restaurant and a link to the menu prices.
- 
-It was Built for Assignment a school assignment that required a Build of a Full Website.
- 
+JAMAICA EATS
 Student: Nicholas Williams
 Student ID: 2401011388
-GitHub repository: https://github.com/Sonickk7/first-assignment
- 
- 
+
+
+This is a small website which features the Top 5 fast food restaurants in Jamaica which are KFC, Pizza Hut, Burger King, Tastee Patties and Domino's. Each restaurant has a short background, menu highlights a video for the restaurant and a link to the menu prices.
+
 CONCEPT AND AUDIENCE
+This site is for people mainly tourists who want to check out the best fast food places in a quick and easy way. The information they will receive is background information, the menu, a video ad and where to check prices. The concept is based on the approved Kingston Eats idea (food discovery), widened to fast food across Jamaica with a green gold and black theme.
 
-This site is for people mainly tourists who want to check out the best fast food places in a quick and easy way. The information they will receive is background information, the menu, a video ad and where to check prices. The concept is based on the approved Kingston Eats idea (food discovery), widened to fast food across Jamaica.
- 
- 
+
 PAGES
+Home (index.html): Navbar Hero banner, carousel, filterable restaurant cards, quick facts table, and an accordion with full details.
+Contact Us (contact_us.html): Navbar Contact form with JavaScript validation.
+Confirmation (confirmation.html): Navbar Thank-you page that greets the person by name.
+About Us (about_us.html): Navbar About the site, mission and values.
 
-Home (index.html)
-  Hero banner, carousel, filterable restaurant cards, quick facts table, and an accordion with full details.
- 
-Contact Us (contact_us.html)
-  Contact form with JavaScript validation.
- 
-Confirmation (confirmation.html)
-  Thank-you page that greets the person by name.
- 
-About Us (about_us.html)
-  About the site, mission and values.
- 
-All pages share the same navbar, footer and colour scheme since its made for mainly tourist its colour pallet is green, gold and black which represent Jamaica.
- 
- 
+
 TECHNOLOGIES USED
-
 - HTML5 (header, nav, main, section, footer)
 - CSS (css/site.css) for the colour scheme, hero banner and hover effects
 - Bootstrap 5.3 (downloaded from getbootstrap.com, local files in css/ and js/) for layout, components and responsive design
 - JavaScript (js/app.js) for the data, filtering, active page tracking and form validation
 - jQuery 3.7 for the live table search
 - Git and GitHub for version control
- 
- 
+
 BOOTSTRAP COMPONENTS
 
 Bootstrap JavaScript components (3):
- 
 1. Collapse (navbar toggler): the navbar collapses into a menu button on small screens.
 2. Carousel: the "A Taste of Jamaican Fast Food" slideshow on the home page.
 3. Accordion: the "Full Details" section, one collapsible item per restaurant. The "View details" button on each card opens the matching accordion item using Bootstrap's JavaScript (bootstrap.Collapse).
  
 Bootstrap features used: responsive navbar, container and grid (row, col-*), cards, buttons, table (table-striped, table-responsive), form controls with validation feedback, alerts, badges, the ratio helper for the videos, and spacing and responsive utilities.
- 
- 
-JAVASCRIPT CONCEPTS (js/app.js)
-3
-Variables (const, let)
-  "const restaurants" never changes. "let selectedCategory" changes when a filter button is clicked.
- 
-Data types
-  Strings (name, category), numbers (rank, yearOpened) and booleans (hasJerk).
- 
-Array
-  "restaurants" holds all five restaurants.
- 
-Objects
-  Each restaurant is an object with related properties.
- 
-Conditions
-  describeAge() handles restaurants with no known opening year. The "Jerk option" badge only shows when hasJerk is true. The form checks use conditions too.
- 
-Functions
-  describeAge, buildCard, showRestaurants, createFilterButtons, buildTable, openDetails, trackActivePage, validateContactForm.
- 
-Iteration
-  for...of loops build the cards, categories and table rows. forEach creates the buttons and updates the nav links.
- 
-DOM selection
-  getElementById, querySelector, querySelectorAll.
- 
-DOM modification
-  innerHTML, textContent, classList, createElement, appendChild.
- 
-Events
-  Filter button clicks, "View details" clicks, form submit and reset, and the jQuery keyup event.
- 
- 
-INTERACTIVE FEATURES
 
+
+
+
+JAVASCRIPT CONCEPTS (js/app.js)
+Variables (const, let): "const restaurants" never changes. "let selectedCategory" changes when a filter button is clicked.
+ 
+Data types: Strings (name, category), numbers (rank, yearOpened) and booleans (hasJerk).
+ 
+Array: "restaurants" holds all five restaurants.
+ 
+Objects: Each restaurant is an object with related properties.
+ 
+Conditions :describeAge() handles restaurants with no known opening year. The "Jerk option" badge only shows when hasJerk is true. The form checks use conditions too.
+ 
+Functions: describeAge, buildCard, showRestaurants, createFilterButtons, buildTable, openDetails, trackActivePage, validateContactForm.
+ 
+Iteration: for…of loops build the cards, categories and table rows. forEach creates the buttons and updates the nav links. 
+NOTES: The for...of loop is a tool in JavaScript used to step through a collection of data, item by item, and look at each value directly
+ 
+DOM selection: getElementById, querySelector, querySelectorAll. 
+NOTES: DOM Selection in JavaScript is the process of targeting specific HTML elements within the Document Object Model (DOM) so you can manipulate their content, styles, or attributes.
+ 
+DOM modification: innerHTML, textContent, classList, createElement, appendChild.
+NOTES: DOM (Document Object Model) manipulation allows JavaScript to dynamically change a webpage's content, structure, and styling without requiring a page reload.
+
+Events: Filter button clicks, "View details" clicks, form submit and reset, and the jQuery keyup event.
+
+
+
+INTERACTIVE FEATURES
 - Category filter: buttons (All, Chicken, Pizza, Burgers, Patties) change which cards are visible and update the "Showing X of 5" count.
 - View details: opens the matching accordion item and scrolls to it.
 - Active page tracking: the navbar highlights the page you are on.
 - Table search (jQuery): typing in the search box hides table rows that do not match.
- 
- 
-CONTACT FORM AND VALIDATION
 
-The form on contact_us.html is handled by a JavaScript submit event listener (event.preventDefault()). It reads the values with .value and checks:
- 
+
+
+ CONTACT FORM AND VALIDATION
+The form on contact_us.html is handled by a JavaScript submit event listener (event.preventDefault()). It reads the values with value and checks:
 - Name: at least 2 characters
 - Email: matches an email pattern
 - Message: at least 10 characters
- 
-Invalid fields get a red border and an error message, and a warning alert appears at the top. When everything is valid, the person is sent to confirmation.html, which greets them by name.
- 
- 
-JQUERY
+ Invalid fields get a red border and an error message, and a warning alert appears at the top. When everything is entered correctly, the person is then sent to confirmation.html, which greets them by the name they entered.
 
-jQuery powers the live search above the Quick Facts table:
- 
+
+
+
+JQUERY
+jQuery was used for the live search above the Quick Facts table:
     $("#tableSearch").on("keyup", function () {
         const searchText = $(this).val().toLowerCase();
         $("#factsTable tbody tr").each(function () {
@@ -113,62 +89,16 @@ jQuery powers the live search above the Quick Facts table:
             $(this).toggle(matches);
         });
     });
- 
- 
-ACCESSIBILITY AND RESPONSIVE DESIGN
 
+
+
+
+ACCESSIBILITY AND RESPONSIVE DESIGN
 - Correlation of text on images, titles on the videos, and labels linked to every form field
 - Visible keyboard focus (Bootstrap defaults) and aria attributes on the navbar, carousel and accordion
 - Tested at desktop
- 
- 
-PROJECT STRUCTURE
-
-first-assignment/
-    index.html
-    about_us.html
-    contact_us.html
-    confirmation.html
-    README.txt
-    css/
-        bootstrap.min.css
-        site.css
-    js/
-        bootstrap.min.js
-        app.js
-    images/
-        about_us_image.jpg
-        about_us_image_lady.jpg
- 
- 
-HOW TO RUN
-
-Download or clone the repository and open index.html in a web browser. jQuery is loaded from the jQuery CDN, so an internet connection is needed for the table search and the embedded videos.
- 
- 
-SOURCES AND LEARNING RESOURCES
-
+LEARNING RESOURCES
 Learning resources:
 - Bootstrap files and documentation: https://getbootstrap.com
-- Course videos on Udemy, which my lecturer gave us access to
- 
-Restaurant information and menu price links:
-- KFC Jamaica: https://kfcjamaica.com/en/about-us
-- KFC prices: https://fastfoodsmenu.com/kfc-menu-prices-in-jamaica/
-- Pizza Hut Jamaica menu: https://www.pizzahutjamaica.com/en/menu
-- Jamaica Observer on Restaurants of Jamaica: https://www.jamaicaobserver.com/2019/12/17/restaurants-of-jamaica-ups-locations-to-51/
-- Burger King prices: https://fastfoodsmenu.com/burger-king-menu-prices-jamaica/
-- Jamaica Observer, Burger King's 35 Years: https://jamaicaobserver.com/2019/12/13/burger-kings-35-years-of-awesome
-- Jamaica Observer, Restaurant Associates Ltd celebrates 40 years: https://jamaicaobserver.com/2025/01/08/restaurant-associates-ltd-celebrates-40-years-ambitious-growth-plans
-- Tastee Jamaica: https://www.tasteejamaica.com
-- Jamaica Observer, 60 years of Tastee: https://www.jamaicaobserver.com/2026/09/01/60-years-tastee-celebration-food-music-jamaican-legacy/
-- Domino's Pizza Jamaica: https://www.dominos.com.jm
-- Gleaner on First Order Brands: https://jamaica-gleaner.com/article/business/20260414/first-order-snags-dominos-jamaica
-- Jamaica Observer on the Havendale outlet: https://www.jamaicaobserver.com/2025/11/29/dominos-pizza-jamaica-expands-havendale-outlet/
- 
-Prices are not copied into the site because they change and vary by branch. Each restaurant links to a menu page instead.
- 
- 
-AI USE
-
-I used AI to help with explaining certain things and help me figure out what i could add to my site and to help research the restaurant information.
+- Course videos on Udemy, which my lecturer gave us access to these videos helped a lot
+-  AI was used to help with explaining certain things such as code that was not understood including how to add it to my website and help me figure out what I could add to my website and to help research the restaurant information.
